@@ -65,7 +65,6 @@ void homeFunction()
 }
 homeFunction();
 
-*/
 
 // 2. Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет
 
@@ -73,14 +72,49 @@ void homeFunction1()
 {
     Console.Write("Enter a three-digit number: ");
     int num = Convert.ToInt32(Console.ReadLine());
-    int num2 = num % 10;
-    int num3 = 100;
-    int num4 = 1000;
-    if (num > num3 || num < num4){
-        Console.WriteLine("Third number " + num + " -> " + num2);
+    int num1 = num % 10;
+    if (num < 100 || num > 1000){
+        Console.WriteLine("No third number");
     }
-    else (num < num3 || num > num4){
-        Console.Write("No third number");
+    else{
+        Console.Write("Third number " + num + " -> " + num1);
     }
 }
 homeFunction1();
+
+*/
+
+// 3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным
+
+void homeFunction3()
+{
+    Console.Write("Enter a three-digit number: ");
+    int day = Convert.ToInt32(Console.ReadLine());
+    if (day < 1 || day > 7){
+    Console.WriteLine("Incorrect number");
+    }
+    else{
+        if (day == 1){
+        Console.Write("Monday is a working day");
+        }
+        if (day == 2){
+        Console.Write("Tuesday is a working day");
+        }
+        if (day == 3){
+        Console.Write("Wednesday is a working day");
+        }
+        if (day == 4){
+        Console.Write("Thursday is a working day");
+        }
+        if (day == 5){
+        Console.Write("Friday is a working day");
+        }
+        if (day == 6){
+        Console.Write("Saturday is a day off");
+        }
+        if (day == 7){
+        Console.Write("Sunday is a day off");
+        }
+    }
+}
+homeFunction3();
